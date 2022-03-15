@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+}
+
+body {
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    height: 100vh;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-img {
+    margin-top: auto;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.container-box {
+    margin-top: 100px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: #062340;
+}
+
+.title {
+    color: black;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    width: 100%;
+    background-color: #212529;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}

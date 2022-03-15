@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 750px) and (min-width:550px) {
+    #search {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 550px)and (min-width:23px) {
+    #search {
+        width: auto;
+    }
+}
+
+@media screen and (max-height: 600px)and (min-height:120px) {
+    #search {
+        width: auto;
+    }
+}
+
+.back-img {
+    margin-top: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    z-index: -1000;
+}
+
+.container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 50px;
+}
+
+.search-box {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.City-search {
+    display: flex;
+}
+
+form.City-search input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80vh;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+form.City-search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(33, 37, 41);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form.City-search button:hover {
+    background: #020927;
+}
+
+.card {
+    width: auto;
+    height: auto;
+    z-index: 1000;
+    box-sizing: content-box;
+}
+
+.temp-logo {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    gap: 80px;
+    margin-top: 30px;
+    flex-direction: row;
+}
+
+#card-text-1 {
+    font-size: 5vh;
+}
+
+footer {
+    width: 100%;
+    background-color: #212529;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}

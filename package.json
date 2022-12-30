@@ -3,12 +3,10 @@
     "name": "basic_app",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "dev": "nodemon -r dotenv/config src/server.js ",
-        "start": "node -r dotenv/config src/server.js ",
-        "predeploy":"npm run build",
-        "deploy":"gh-pages -d build"
+        "start": "node -r dotenv/config src/server.js "
     },
     "author": "",
     "license": "ISC",

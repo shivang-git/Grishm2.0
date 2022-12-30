@@ -5,9 +5,9 @@ const path = require('path')
 const port = process.env.PORT || 3000
 const flash = require('connect-flash')
 const authroute = require('../routes/auth-route')
-const router = require('../routes/router')
+const route = require('../routes/route')
 const bodyParser = require('body-parser')
-const cookieparser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 const hbs = require('hbs')
 require('../configure/passport-setup')
 const cookiesession = require('cookie-session')
@@ -22,14 +22,15 @@ mongoose.connect(database_link)
 
 
 const staticpath = path.join(__dirname, '../public')
-
-app.use(cookieparser())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
-
-app.use(express.json())
 app.use(express.static(staticpath))
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(cookieParser())
+
+
+// authenticate oauth
 app.use(function(req, res, next) {
     if (!req.user) {
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
@@ -82,7 +83,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '../views'));
 
 app.use('/auth', authroute);
-app.use('/', router)
+app.use('/', route)
 
 app.get('*', (req, res) => {
     res.status(404).render('404')

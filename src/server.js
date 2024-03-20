@@ -31,7 +31,7 @@ const session = require('express-session')
 const jwt = require('jsonwebtoken')
 
 //database link
-const database_link = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.29gsz.mongodb.net/grishm?retryWrites=true&w=majority`
+const database_link = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.29gsz.mongodb.net/user?retryWrites=true&w=majority`
 const mongoose = require("mongoose");
 
 mongoose.connect(database_link)

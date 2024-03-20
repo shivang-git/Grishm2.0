@@ -15,7 +15,7 @@ const sendmail = async(username, email, subject, message, cb) => {
     // send mail with defined transport object
     let mailOption = {
         from: { name: `${username}`, address: `${email}` }, // sender address
-        to: "mail.support@aloksvt.com", // list of receivers
+        to: "mail.suport13@gmail.com", // list of receivers
         subject: `${subject}`, // Subject line
         html: `<p>Name: ${username}</p>
        <p>Email: ${email}</p>

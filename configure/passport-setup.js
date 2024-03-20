@@ -5,7 +5,7 @@ const user_detail = require('../models/google-user-model')
 fields = {
     clientID: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: process.env.CALLBACKURL
 }
 
 

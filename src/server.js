@@ -1,22 +1,38 @@
 const env = require('dotenv').config({ path: '../.env' })
+//server setup
 const express = require('express')
 const app = express()
 const path = require('path')
 const port = process.env.PORT || 3000
+
+
 const flash = require('connect-flash')
+
+//endpoints for users
 const authroute = require('../routes/auth-route')
 const route = require('../routes/route')
+
+// parsing body and cookie
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+
+//view
 const hbs = require('hbs')
+
+//passport js
 require('../configure/passport-setup')
+const passport = require('passport')
+
+//session
 const cookiesession = require('cookie-session')
 const session = require('express-session')
-const passport = require('passport')
-const jwt = require('jsonwebtoken')
-const database_link = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.29gsz.mongodb.net/user?retryWrites=true&w=majority`
-const mongoose = require("mongoose");
 
+//token
+const jwt = require('jsonwebtoken')
+
+//database link
+const database_link = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.29gsz.mongodb.net/grishm?retryWrites=true&w=majority`
+const mongoose = require("mongoose");
 
 mongoose.connect(database_link)
 
